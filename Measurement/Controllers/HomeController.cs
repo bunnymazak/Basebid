@@ -12,6 +12,6 @@ namespace Measurement.Controllers
         public ActionResult Index()
         {        
             return View();
-        }        
+        }   
     }
 }
