@@ -1,0 +1,25 @@
+﻿
+	#agd_tooltip{
+		background-color:#fff;
+		border:2px solid #929292;
+		position:absolute;
+		display:none;
+		z-index:20000;
+		padding:10px 15px;
+		-moz-border-radius:6px;	/* Rounded edges in Firefox */
+		font:normal 12px Arial, Helvetica, sans-serif
+	}
+	#agd_tooltip .btmleft{
+		background:url(/images/arrows/blk_down.gif) bottom left no-repeat;
+	}
+	#agd_tooltipShadow{
+		position:absolute;
+		background-color:#929292;
+		display:none;
+		z-index:10000;
+		opacity:0.7;
+		filter:alpha(opacity=70);
+		-khtml-opacity: 0.7;
+		-moz-opacity: 0.7;
+		-moz-border-radius:6px;	/* Rounded edges in Firefox */
+	}

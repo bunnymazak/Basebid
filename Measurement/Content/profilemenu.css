@@ -1,0 +1,73 @@
+﻿Table.Profile_Icons{
+	border: 0px dashed #009966;
+	width:100%;
+}
+Table.Profile_Icons td{
+	padding:4px;
+	text-decoration:none;
+	border:0px;
+	text-align:center;
+}
+Table.Profile_Icons td a{
+	color:#000000;
+	text-decoration:none;
+	border:0px;	
+}
+#profile_link{
+	font:bold 10pt Geneva, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	color:#696A6C;
+	display:block;
+	padding-bottom:0px;
+	border:0px;
+}
+
+#profile_icon{
+	width:100px;
+	vertical-align:middle;
+	border:0px;
+}
+table.profiletbl{
+	width:100%;
+}
+table.profiletbl td{
+	vertical-align:top;
+	text-align:left;
+}
+
+#updatestat{
+	background-color:#EDFFE8;
+	padding:10px;
+	font:bold 14px Arial, Helvetica, sans-serif;
+	width:100%;
+	display:none;
+	text-align:center;
+}
+#profile_results{
+	overflow-x:hidden;
+	/*overflow-y:scroll;*/
+	min-height:520px;
+	width:auto;
+	border:solid 1px #cccccc;
+}
+
+div#memphoto{
+	height:auto;
+	width:auto;
+}
+div#memphoto img{
+	display:inline;
+	border:1px solid #333333;
+	border-bottom:2px solid #333;
+	border-right:2px solid #333;
+	/*margin:3px;*/
+	margin:3px auto;
+}
+
+#profile_results .buttonwrapper{
+	margin-top:20px;
+}
+.pp_submitdiv{
+	margin-top:20px;
+}
+	

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+     <link rel="stylesheet" type="text/css" href="~/Content/profilemenu.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/tooltip.css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="~/Scripts/tooltip.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/agd.js?ver=.2"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")" type="text/javascript"></script>
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    @Styles.Render("~/Content/mobileCss", "~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+   @* <div data-role="page" data-theme="b">*@
+        @*<div data-role="header" data-position="fixed" data-theme="b">
+            <div>This is Tablet View</div>
+            <div id="pageHeader">
+                My Profile
+            </div>
+            @if (IsSectionDefined("Header"))
+            {
+                @RenderSection("Header")
+            }
+            else
+            {
+                <h1>@ViewBag.Title</h1>
+                @Html.Partial("_LoginPartial")
+            }
+        </div>*@
+        <header>
+            <div class="content-wrapper">
+               @* <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                </div>*@
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    @*<nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                    </nav>*@
+                </div>
+            </div>
+        </header>
+        <div id="body">          
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+                <td width="25%" valign="top">
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%" class="Profile_Icons">
+                        <tr id="p1" onmouseover="javascript:getElementById('p1').style.backgroundColor='#E7E7E7';"
+                            onmouseout="javascript:getElementById('p1').style.backgroundColor='#FFFFFF';">
+                            <td valign="middle">
+                                <a href="javascript: LoadData('#profile_results', '@Url.Action("PersonalView", "Measurement")')" title="Personal Info">
+                                    <img src="~/Images/Desktop/Demo.png" alt="Removal Demolition" width="100" height="86" border="0"
+                                        name="PersonalInfo" id="profile_icon"></a>
+                                <br>
+                                <a href="javascript: LoadData('#profile_results', '@Url.Action("PersonalView", "MyProfile")')" title="Personal Info">
+                                    <span id="profile_link">Demolition</span></a>
+                            </td>
+                        </tr>
+                        <tr id="p2" onmouseover="javascript:getElementById('p2').style.backgroundColor='#E7E7E7';"
+                            onmouseout="javascript:getElementById('p2').style.backgroundColor='#FFFFFF';">
+                            <td valign="middle">
+                                <a href="javascript:LoadData('#profile_results', '@Url.Action("EducationView", "MyProfile")')" title="School/Education">
+                                    <img name="ED" src="~/Images/Desktop/plumbing.png" alt="Plumbing" id="profile_icon" border="0"></a>
+                                <br>
+                                <a href="javascript:LoadData('#profile_results', '@Url.Action("EducationView", "MyProfile")')" title="School/Education">
+                                    <span id="profile_link">Plumbing</span></a>
+                            </td>
+                        </tr>
+                        <tr id="p3" onmouseover="javascript:getElementById('p3').style.backgroundColor='#E7E7E7';"
+                            onmouseout="javascript:getElementById('p3').style.backgroundColor='#FFFFFF';">
+                            <td valign="middle">
+                                <a href="javascript:LoadData('#profile_results', '@Url.Action("LicenseView", "MyProfile")')" title="License Info">
+                                    <img src="~/Images/Desktop/electrical.png" alt="Electrical" name="LicenseInfo" id="profile_icon" border="0"></a>
+                                <br>
+                                <a href="javascript:LoadData('#profile_results', '@Url.Action("LicenseView", "MyProfile")')" title="License Info">
+                                    <span id="profile_link">Electrical</span></a>
+                            </td>
+                        </tr>
+                        <tr id="p4" onmouseover="javascript:getElementById('p4').style.backgroundColor='#E7E7E7';"
+                            onmouseout="javascript:getElementById('p4').style.backgroundColor='#FFFFFF';">
+                            <td valign="middle">
+                                <a href="javascript:LoadData('#profile_results', '@Url.Action("PracticeView", "MyProfile")')" title="Practice Info">
+                                    <img src="~/Images/Desktop/fans.png" alt="Bath Fans" name="PracticeInfo" id="profile_icon" border="0"></a>
+                                <br>
+                                <a href="javascript:LoadData('#profile_results', '@Url.Action("PracticeView", "MyProfile")')" title="Practice Info">
+                                    <span id="profile_link">Bath Fans</span></a>
+                            </td>
+                        </tr>
+                        <tr id="p5" onmouseover="javascript:getElementById('p5').style.backgroundColor='#E7E7E7';"
+                            onmouseout="javascript:getElementById('p5').style.backgroundColor='#FFFFFF';">
+                            <td valign="middle">
+                                <a href="javascript: LoadData('#profile_results', '@Url.Action("MentorProfileView", "MyProfile")')" title="Mentor Profile">
+                                    <img src="~/Images/Desktop/framing.png" alt="Framing" name="MentorPro" width="100"
+                                        height="86" id="mentor_icon" border="0"></a>
+                                <br>
+                                <a href="javascript: LoadData('#profile_results', '@Url.Action("MentorProfileView", "MyProfile")')" title="Mentor Profile">
+                                    <span id="profile_link">Framing</span></a>
+                            </td>
+                        </tr>
+                        <tr id="p6" onmouseover="javascript:getElementById('p6').style.backgroundColor='#E7E7E7';"
+                            onmouseout="javascript:getElementById('p6').style.backgroundColor='#FFFFFF';">
+                            <td valign="middle">
+                                <a href="javascript: LoadData('#profile_results', '@Url.Action("OtherView", "MyProfile")')" title="Other">
+                                    <img src="~/Images/Desktop/wall.png" alt="Wall Work" name="Other" width="100" height="86"
+                                        id="other_icon" border="0"></a>
+                                <br>
+                                <a href="javascript: LoadData('#profile_results', '@Url.Action("OtherView", "MyProfile")')" title="Other">
+                                    <span id="profile_link">Wall Work</span></a>
+                            </td>
+                        </tr>
+                        <tr id="p7" onmouseover="javascript:getElementById('p7').style.backgroundColor='#E7E7E7';"
+                            onmouseout="javascript:getElementById('p7').style.backgroundColor='#FFFFFF';">
+                            <td valign="middle">
+                                <a href="javascript:LoadData('#profile_results', '@Url.Action("FSigView", "MyProfile")');" title="Special Interest Groups">
+                                    <img src="~/Images/fsig.gif" alt="Special Interest Groups" name="SigIcon" width="100"
+                                        height="86" id="fsig_icon" border="0"></a>
+                                <br>
+                                <a href="javascript:LoadData('#profile_results', '@Url.Action("FSigView", "MyProfile")');" title="Special Interest Groups">
+                                    <span id="profile_link">Special Interest Groups</span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="border-left: 0px solid #CCCCCC;">
+                    &nbsp;
+                </td>
+                <td width="75%" valign="top">
+                    <div id="profile_results">
+                        @RenderBody()</div>
+                </td>
+            </tr>
+        </table> 
+        </div>
+
+    @Scripts.Render("~/bundles/jquery", "~/bundles/jquerymobile")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

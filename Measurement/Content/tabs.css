@@ -1,0 +1,30 @@
+﻿#tabs { 
+    background: transparent; 
+    border: none; 
+} 
+#tabs .ui-widget-header { 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #c0c0c0; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+#tabs .ui-tabs-nav .ui-state-default { 
+    background: transparent;
+    border: none; 
+} 
+#tabs .ui-tabs-nav .ui-state-active { 
+    /*background: transparent url(images/desktop/arrow.png) no-repeat bottom center !important; */
+    background: no-repeat bottom center;
+    background-image: url('images/arrow.png');
+    border: none; 
+} 
+#tabs .ui-tabs-nav .ui-state-default a { 
+    color: #c0c0c0; 
+} 
+#tabs .ui-tabs-nav .ui-state-active a { 
+    color: #459e00; 
+     background: no-repeat bottom center;
+    /*background-image: url('images/arrow.png');*/    
+}

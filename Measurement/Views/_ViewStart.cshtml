@@ -1,0 +1,20 @@
+﻿@{
+    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    string cLayout = "";
+    if (controller == "Home")
+    {
+        cLayout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else if (controller == "Bath")
+    {
+        if(Request.IsAjaxRequest())
+        {
+            cLayout = null;
+        }
+        else
+        {
+            cLayout = "~/Views/Shared/_BathLayout.cshtml";
+        }
+    }
+    Layout = cLayout;
+}
